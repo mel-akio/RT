@@ -6,7 +6,7 @@
 /*   By: aberneli <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/30 15:54:23 by aberneli     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/30 16:15:20 by aberneli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 16:23:57 by aberneli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -63,6 +63,7 @@ typedef struct			s_obj
 	float				fdata1;
 	float				fdata2;
 	int					type;
+	struct s_obj		*next;
 }						t_obj;
 
 typedef struct			s_light
@@ -71,6 +72,7 @@ typedef struct			s_light
 	t_vec				dir;
 	float				radius;
 	int					type;
+	struct s_light		*next;
 }						t_light;
 
 #endif
